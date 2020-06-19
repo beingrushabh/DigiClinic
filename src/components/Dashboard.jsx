@@ -5,6 +5,7 @@ import doctorPic from "../resources/doctor.png";
 import Features from "./Features";
 import Services from "./Services";
 import About from "./About";
+import TopBlogsList from "./TopBlogsList";
 
 class Dashboard extends Component {
   state = {};
@@ -40,17 +41,19 @@ class Dashboard extends Component {
           </div>
         </section>
         <Features />
-        <About />
-        <Services />
-        <div className="container">
+        <TopBlogsList />
+        {/* <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-4"></div>
             <div className="col-lg-4 col-md-4 col-sm-12">
               <FrontList />
             </div>
-            <div className="col-lg-4 col-md-4"></div>
+            <div className="col-lg-4 col-md-4">
+              <TopBlogsList />
+            </div>
           </div>
-        </div>
+        </div> */}
+        <Services />
       </div>
     );
   }

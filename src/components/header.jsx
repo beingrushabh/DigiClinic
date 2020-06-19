@@ -23,7 +23,7 @@ class Head extends Component {
                   <a href="#services">Services</a>
                 </li>
                 <li>
-                  <a href="#portfolio">Portfolio</a>
+                  <a href="#portfolio">Blogs</a>
                 </li>
                 <li>
                   <a href="#team">Team</a>
