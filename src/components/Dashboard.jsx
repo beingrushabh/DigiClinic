@@ -6,6 +6,10 @@ import Features from "./Features";
 import Services from "./Services";
 import About from "./About";
 import TopBlogsList from "./TopBlogsList";
+import News from "./News";
+import OurDoctors from "./OurDoctors";
+import Testimonial from "./Testimonial";
+import SideNewsBar from "./SideNewsBar";
 
 class Dashboard extends Component {
   state = {};
@@ -40,20 +44,22 @@ class Dashboard extends Component {
             </div>
           </div>
         </section>
-        <Features />
-        <TopBlogsList />
-        {/* <div className="container">
+
+        <Services />
+
+        <OurDoctors />
+
+        <br />
+        <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-md-4"></div>
-            <div className="col-lg-4 col-md-4 col-sm-12">
-              <FrontList />
+            <div className="col-lg-8 col-md-4">
+              <SideNewsBar />
             </div>
             <div className="col-lg-4 col-md-4">
               <TopBlogsList />
             </div>
           </div>
-        </div> */}
-        <Services />
+        </div>
       </div>
     );
   }

@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import DisplayBlog from "./components/DisplayBlog";
 import TheBlog from "./components/TheBlog";
+import News from "./components/News";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/News">
+            <News />
+          </Route>
           <Route path="/Blog">
             <TheBlog />
           </Route>

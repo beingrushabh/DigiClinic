@@ -7,74 +7,50 @@ class TopBlogsList extends Component {
   render() {
     return (
       <div>
-        <div class="site-section">
-          <div class="container">
-            <div class="row mb-5">
-              <div class="col-12">
-                <h2>Top posts</h2>
-              </div>
-            </div>
-
-            <div class="row align-items-stretch retro-layout">
-              <div class="col-md-5 order-md-2">
-                <a
-                  href="/Blog"
-                  class="hentry img-1 h-100 gradient"
-                  style={{ backgroundImage: `url(${Blog_img})` }}
-                >
-                  <span class="post-category text-white bg-danger">Travel</span>
+        <div class="sidebar-box">
+          <h3 class="heading">Popular Posts</h3>
+          <div class="post-entry-sidebar">
+            <ul>
+              <li>
+                <a href="/Blogs">
+                  <img src={Blog_img} alt="Image placeholder" class="mr-4" />
                   <div class="text">
-                    <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                    <span>February 12, 2019</span>
+                    <h4>
+                      There’s a Cool New Way for Men to Wear Socks and Sandals
+                    </h4>
+                    <div class="post-meta">
+                      <span class="mr-2">March 15, 2018 </span>
+                    </div>
                   </div>
                 </a>
-              </div>
-
-              <div class="col-md-7">
-                <a
-                  href="/Blog"
-                  class="hentry img-2 v-height mb30 gradient"
-                  style={{ backgroundImage: `url(${Blog_img})` }}
-                >
-                  <span class="post-category text-white bg-success">
-                    Nature
-                  </span>
-                  <div class="text text-sm">
-                    <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                    <span>February 12, 2019</span>
+              </li>
+              <li>
+                <a href="">
+                  <img src={Blog_img} alt="Image placeholder" class="mr-4" />
+                  <div class="text">
+                    <h4>
+                      There’s a Cool New Way for Men to Wear Socks and Sandals
+                    </h4>
+                    <div class="post-meta">
+                      <span class="mr-2">March 15, 2018 </span>
+                    </div>
                   </div>
                 </a>
-
-                <div class="two-col d-block d-md-flex">
-                  <a
-                    href="/Blog"
-                    class="hentry v-height img-2 gradient"
-                    style={{ backgroundImage: `url(${Blog_img})` }}
-                  >
-                    <span class="post-category text-white bg-primary">
-                      Sports
-                    </span>
-                    <div class="text text-sm">
-                      <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                      <span>February 12, 2019</span>
+              </li>
+              <li>
+                <a href="">
+                  <img src={Blog_img} alt="Image placeholder" class="mr-4" />
+                  <div class="text">
+                    <h4>
+                      There’s a Cool New Way for Men to Wear Socks and Sandals
+                    </h4>
+                    <div class="post-meta">
+                      <span class="mr-2">March 15, 2018 </span>
                     </div>
-                  </a>
-                  <a
-                    href="/Blog"
-                    class="hentry v-height img-2 ml-auto gradient"
-                    style={{ backgroundImage: `url(${Blog_img})` }}
-                  >
-                    <span class="post-category text-white bg-warning">
-                      Lifestyle
-                    </span>
-                    <div class="text text-sm">
-                      <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                      <span>February 12, 2019</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

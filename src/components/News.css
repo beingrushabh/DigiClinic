@@ -1,0 +1,18 @@
+.sideNewsTemplate li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px !important;
+
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.sideNewsTemplate img {
+  border-radius: 5px;
+}
+.sideNewsTemplate li .hover {
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.newsInstance img {
+  max-height: 200px;
+  object-fit: cover !important;
+}
