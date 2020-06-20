@@ -9,7 +9,7 @@ class SideNewsBar extends Component {
   async componentDidMount() {
     await axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=e1f711dcc0c24559b93c5baa458ef502"
+        "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=e1f711dcc0c24559b93c5baa458ef502"
       )
       .then((data) => {
         this.setState({
