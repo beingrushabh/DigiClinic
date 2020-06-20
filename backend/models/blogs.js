@@ -18,6 +18,30 @@ const blogSchema = new Schema({
 		type: Schema.Types.String,
 		required: true,
 	},
+	comments: [
+		{
+			author: {
+				type: Schema.Types.String,
+				required: true,
+			},
+
+			comment: {
+				type: Schema.Types.String,
+				required: true,
+			},
+
+			date: {
+				type: Schema.Types.Date,
+				required: true,
+			},
+		},
+	],
+	tags: {
+		type: [String],
+		required: true,
+	},
 });
+
+blogSchema.postComments = (id, comment, author) => {};
 
 module.exports = mongoose.model("Blog", blogSchema);
