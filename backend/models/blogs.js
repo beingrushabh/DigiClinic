@@ -42,6 +42,4 @@ const blogSchema = new Schema({
 	},
 });
 
-blogSchema.postComments = (id, comment, author) => {};
-
 module.exports = mongoose.model("Blog", blogSchema);
