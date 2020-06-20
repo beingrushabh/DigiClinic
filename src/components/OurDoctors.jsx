@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import OurDoc_img from "../resources/OurDoctor_img.jpeg";
+import OurDoc_img from "./resources/OurDoctor_img.jpeg";
 import "./OurDoctors.css";
 
 class OurDoctors extends Component {

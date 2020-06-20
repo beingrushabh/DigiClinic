@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import FrontList from "./FrontList";
 import Head from "./header";
-import doctorPic from "../resources/doctor.png";
+import doctorPic from "./resources/doctor.png";
 import Features from "./Features";
 import Services from "./Services";
 import About from "./About";
-import TopBlogsList from "./TopBlogsList";
-import News from "./News";
+import TopBlogsList from "./Blogs/TopBlogsList";
+import News from "./News/News";
 import OurDoctors from "./OurDoctors";
 import Testimonial from "./Testimonial";
-import SideNewsBar from "./SideNewsBar";
+import SideNewsBar from "./News/SideNewsBar";
 
 class Dashboard extends Component {
   state = {};

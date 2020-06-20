@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./TheBlog.css";
+import "../Blogs/TheBlog.css";
 import "./News.css";
 import Blog_img from "../resources/Doctor_blog.jpg";
 import axios from "axios";
