@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import "./DisplayBlog.css";
+import Head from "../header";
+import PostBlog from "./PostBlog";
 
 class DisplayBlog extends Component {
-  state = {};
+  state = {
+    postBlog: false,
+  };
+
+  PostBlog() {
+    this.setState({
+      postBlog: true,
+    });
+  }
   render() {
     return (
       <div>
+        <Head />
         <header class="masthead Hearder">
           <div class="overlay"></div>
           <div class="container">
@@ -21,9 +32,17 @@ class DisplayBlog extends Component {
             </div>
           </div>
         </header>
-
         {/* Main Content  */}
-        <div class="container">
+
+        <button
+          className="btn btn-danger"
+          style={{ marginLeft: "5%" }}
+          onClick={() => (window.location.href = "/PostBlog")}
+        >
+          Add Post
+        </button>
+
+        <div className="container">
           <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
               <div class="post-preview">
@@ -97,9 +116,7 @@ class DisplayBlog extends Component {
             </div>
           </div>
         </div>
-
         <hr />
-
         {/*  Footer */}
         <footer>
           <div class="container">
@@ -109,24 +126,24 @@ class DisplayBlog extends Component {
                   <li class="list-inline-item">
                     <a href="#">
                       <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                       </span>
                     </a>
                   </li>
                   <li class="list-inline-item">
                     <a href="#">
                       <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                       </span>
                     </a>
                   </li>
                   <li class="list-inline-item">
                     <a href="#">
                       <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                       </span>
                     </a>
                   </li>
@@ -138,6 +155,15 @@ class DisplayBlog extends Component {
             </div>
           </div>
         </footer>
+        {this.state.postBlog && (
+          <PostBlog
+            Back={() =>
+              this.setState({
+                postBlog: false,
+              })
+            }
+          />
+        )}
       </div>
     );
   }
