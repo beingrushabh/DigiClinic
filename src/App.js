@@ -4,6 +4,9 @@ import Dashboard from "./components/Dashboard";
 import DisplayBlog from "./components/DisplayBlog";
 import TheBlog from "./components/TheBlog";
 import News from "./components/News";
+import LoginForm from "./components/Login";
+import RegisterForm from "./components/Register";
+import LogOut from "./components/LogOut";
 
 function App() {
   return (
@@ -19,9 +22,14 @@ function App() {
           <Route path="/Blogs">
             <DisplayBlog />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Dashboard />
           </Route>
+          <Route path='/login'>
+            <LoginForm />
+          </Route>
+          <Route path='/register' component={RegisterForm} />
+          <Route path='/logout' component={LogOut} />
         </Switch>
       </Router>
     </div>
