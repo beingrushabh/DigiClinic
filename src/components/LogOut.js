@@ -1,12 +1,14 @@
 import React from "react";
+
 class LogOut extends React.Component {
     constructor(props) {
         super(props);
     }
     handleLogOut = (e)=>{
-        fetch("/api/logout",{ credentials: 'include'}).then(()=>{
+        fetch("/api/logout",{credentials:"include"}).then(()=>{
+            sessionStorage.setItem('loggedIn',false);
             this.props.history.push("/");
-        }).catch(console.log);
+        });
     }
     render(){
         return (

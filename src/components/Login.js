@@ -13,6 +13,7 @@ class Login extends React.Component {
             passwordErr:""
         }
     }
+
     updateUserId = (e)=>{
         const userId = e.target.value;
         this.setState(()=>({
@@ -58,7 +59,12 @@ class Login extends React.Component {
                        ...err
                    }));
                }else{
-                   console.log("logged in");
+                   sessionStorage.setItem('loggedIn',true);
+                   if(this.props.location.state){
+                       this.props.history.push(this.props.location.state);
+                   }else{
+                       this.props.history.push("/");
+                   }
                }
            }).catch((e)=>{
               this.setState(()=>({

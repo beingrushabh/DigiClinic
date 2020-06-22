@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+const cors = require('cors');
 const dotenv = require("dotenv").config();
 const expand = require("dotenv-expand");
 const loginRegister = require('./routes/loginRegister');
@@ -19,6 +20,12 @@ app.use(
 	})
 );
 app.use(express.json());
+
+const corsOptions = {
+    origin : "http://localhost:3000",
+    credentials: true
+}
+app.use(cors(corsOptions));
 
 app.use(morgan("short"));
 
