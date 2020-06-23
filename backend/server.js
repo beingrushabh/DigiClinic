@@ -2,15 +2,17 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
+const dotenv = require("dotenv").config();
+const expand = require("dotenv-expand");
+expand(dotenv);
+
 const BlogsApi = require("./routes/blogs");
+const Auth = require("./routes/auth");
+require("./config/passport");
 
 const mongoose = require("mongoose");
 
 const morgan = require("morgan");
-
-const dotenv = require("dotenv").config();
-const expand = require("dotenv-expand");
-expand(dotenv);
 
 app.use(express.json());
 app.use(
@@ -23,9 +25,10 @@ app.use(morgan("short"));
 app.use(express.static(path.join(__dirname, "../frontend")));
 
 app.use("/api/blogs", BlogsApi);
+app.use("/auth", Auth);
 
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "../frontend/html/index.html"));
+	res.send("Hey there");
 });
 
 mongoose
