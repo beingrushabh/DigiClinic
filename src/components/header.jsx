@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 
 class Head extends Component {
   state = {};
@@ -67,6 +68,19 @@ class Head extends Component {
                 </li>
                 <li>
                   <a href="#contact">Contact</a>
+                </li>
+                <li>
+                  <Link to={'/login'}>
+                    Log In
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/register'}>
+                    Register
+                  </Link>
+                  <Link to={'/logout'}>
+                    Log out
+                  </Link>
                 </li>
               </ul>
             </nav>

@@ -73,14 +73,20 @@ router.post("/api/login",validateUser,function(req,res,next){
 });
 
 router.get("/api/logout",function(req,res){
-   // console.log(req.user,Object.keys(req.session.cookie));
+   console.log(req.isAuthenticated());
    if(req.isAuthenticated()){
-      // console.log("logging out");
       req.logout();
       req.session.destroy();
       res.json("logged out");
    }
 });
 
+router.get("/api/isLoggedIn",function(req,res){
+   if(req.isAuthenticated()){
+      res.json({ loggedIn: true});
+   }else{
+      res.json({loggedIn: false});
+   }
+});
 
 module.exports = router;
